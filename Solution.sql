@@ -54,6 +54,9 @@ SELECT title, release_year FROM film;
 SELECT title FROM film
 WHERE title LIKE "%ARMAGEDDON%";
 
+SELECT title FROM film
+WHERE title REGEXP "ARMAGEDDON+";
+
 -- 11. Get all films which title ends with APOLLO.
 
 SELECT title FROM film
@@ -67,5 +70,5 @@ LIMIT 10;
 
 -- 13. How many films include Behind the Scenes content?
 
-SELECT COUNT(special_features) FROM film
+SELECT COUNT(special_features) AS "BtS Films" FROM film
 WHERE special_features LIKE ("%Behind the Scenes%");
